@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px; }
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 50%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  text-align: center;
+ }
+.red {
+  background-color: #dc3545;
+  color:white;
+}
+.blue {
+  background-color: #17a2b8;
+  color:white;
+}
+	
+.green {
+  background-color: #5cb85c;
+  color:white;
+}
+
+
+img {
+  width: 25%;
+}
+a {
+	text-decoration: none;
+}
+</style>
+</head>
+<body>
+
+<div class="row">
+  <div class="column"><a href="makanan.html">
+    <div class="card red">
+    <img src="data:image/png;base64,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">
+      <h3>Makanan</h3>
+    </div>
+    </a>
+  </div>
+
+  <div class="row">
+    <div class="column"><a href="konversi.html">
+      <div class="card red">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADRElEQVRYCc2XW4hNURjHj+uM27iOWxpnMG4zhHJ9MCgzojRiKJo8KEakSVNEKc9eiAcjoqRJSVMueaEzxYTiBUkuDRIeMNG4xOD3P2ct7bMvx96HOfzrd9Y6a33fXt/+1trf2ScW+8fqlmH9AuYqoBCeZ7DrlKlirvoCbkMbnIGcqoHVfsAsaDH9BbRu9WOgzrCddjn0gtDqHmA5lHEFUAlXYC5ozK0PDOx3DJbQ3wBd4ARoPqOCAjiNVxXoDhXEG1AgVqV0VsI0kM07uApNcAj6Qy3chGbISjV4XYRTMNlxhXr6yk4Q15ibaOxX0K4z/b/WKL07YSMosHGgTGyD66DA2mETSMrg0mQvRx9rWec9KJAtZk0FO9b0QzdjsFQqy2A6ZKoZTKdJfm3wCXRe5LsLImkz1t/B7vWQSN6xWLXxvWX8tA3aqkjai7UNYlQkz5TxZRrdgDKiLNRBmrqmfUv/ogO2HvaBLpIHUdVoHKpoO8CznmfAscIq+qPhPugw9YSosrVjoXHU05Ef9iK2BMeNgx6/qNK5UfbsOVCp1uH+JXcGxjOjEy8NA6WtFSRdKFvpziUF8jHZMx/uAGSowiJ9BR2cbFKvA9sH5oF0N9Ukf2FfmX6ycQfwmtHhxuCxaYtMG6WJY3wBdPqls6nG++kO4Bsm9o7PGfPVXrffjnzBohyWwQFIQGjVYqn0jQDVgEcQ6Tce+ymgMyMSoOv5yq+8PsOyGpphJCyGwaCUhpWyqBL+AFSOB8ANCK2tWA6C3qA6oDvZA+4tY6hzpIVVhrXgVHgJCkKFZQ74qYff4J+MxXGuBxWgQjgPdl+f0FeZPQp6YXkKemqKQNIb0RFIQANMgKw0Ca/dkGe89UToDVnvejYYtdrnJtB5kY6DAj4ILfAQst6+gTjvgCWgbEgKaCZUwGzoC04pI/NBZ0nBKcgS8Mhe0DPhMzCDsUWgUpoApVzPu590VpQRZbAGdPfaxnZIU5QArKNqQjkUgzJxDLQlTun3RNXvEuSDAjoJOZUW1hOkAxmooAwoZWug1OGp9Gk/rbSA3/+Kw4x/NkYdtLa8e9Ivm6AACpjTO5xT9/hyxzFQSV/lOpPeMtkKZdAIOoz/l34CaqugWxNUnQYAAAAASUVORK5CYII=">
+        <h3>Konversi</h3>
+      </div>
+      </a>
+    </div>
+
+  <div class="column">
+  <a href="bpjs.html">
+    <div class="card blue">
+    <img src=" data:image/jpeg;base64,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">
+      <h3>BPJS</h3>
+    </div></a>
+	    </div>
+	  
+ <div class="column"><a href="listrik.html">
+    <div class="card green">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABP0lEQVRYhe2Ur0sEQRiGH0XsGg7BZDMZjQajepgs5usGm8l/QATjWUxmmxa5Jqf7jXoHBmFNFkWZnd31VxvLnSzi3Z4wO1v2hTc/z8vHDFSp8o9oRT0K2M2rETYKETCK80iwedXCalECz3lwc81VIfA0pFbq+rTDcmnrAWJhK08gDlgpTMAIh0PXC5eFwQG00C5tvbWMRYq0tPWfHeaGrhf29C1r2doLpp0JaEV9lCeYOceptYy7E7hhZ1S4ER5MlylncIBYOB5R4F0rFpzCASLhQCvO+jWCGvALbjqHDxDa/uPu+17gPYGTX3dv2RYT3gSM8JIReExDat7giTD/s1zx9RGw6A3eE2j0BRKh4RUOEAlHkWC1oukdDmCEUAtta5n0Dn+7Y8YIT6/3zHqHAyQB62mXpVLgAM7/+CpVgG9dVOaiCyuy7QAAAABJRU5ErkJggg==">
+      <h3>Listrik</h3>
+    </div>
+    </a>
+  </div>
+ 
+
+  <div class="column"><a href="stnk.html">
+    <div class="card red">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADAElEQVRYhe2VW0hTcRzH/5GVkQQ9Bb2Vnml0oXJn87KxmZdOTc05V1akFgX1UlBEF0iULhT2FBXFwlv+nU2rmWu4eebZSs3m3WV00xaUGe4lsB6s/PZgWqbTmfYS+8D34fA//9/n+z+HwyHEjx8/fqaJIOQE3LRw6dSmNtPatGY9r20ttqS8pnxal57XtlI+1amvUZcWWuOjZ11+w7w5mNao2+pcFz+/7DPD7XHA7XHA4TqPtp6in9d2dL27C0vTCU8pn1JhMGiDZkVOqxMlBmH3u+e9VaPiiQv8Ssdb+rWET31mNu9aPLOTN4fPo7a0rld91eMkkxVwexxof6v/RmtS6IwKFFlSc568vPJlIsFUBdweBx44j/TpTDHhf12A8sndPf21XgVTFehwU1CrpmBaUoDMEYSswIYG7cIyYfuHnn4bvMXeeRYt3fle17s/WlHKa1oFISvQAO38ScVCSyx3z5lkq3SqPhmdKhidKujtySizq72G2pKgr9066T2Gh8kwOlWobFINVTqTT04of9O53Pi0fdXQiPjfJbF6/MldSvGr9uDvlqZY3GlU4cD5jZBnyrH1kALX7nPTluRbOGiOKiDPkGNPbgwM9VMUKG9UXS+v42B4xGGDJhqEYUezYLUEF2kcyus4n3LVmICgdZIxM5hNUShzDK9XNHD14woUWGPf60xKHM6TgzAs1qs1MNVTnLqcC8KwWLklAjqT0qdE7YwEYVgcPHMc1Y1liMnIAGFY7MmWQWdSotia8GRcAWqL1xbzcQ0ph2RuwrDIK7w0+hktESuwaL1ksKQm/rEvWaaQDgSESfGi1wa3x4FbZh0Iw0KRKestqY2/XerasdT7ZxAWmUgYFtJt6RDaKnBOd2HkMdq9b/oDRlJCGBZH807D0XEX3P69wzNEEft82K2dSxjW/vv7IyJ2kARHRvlcIFQcSkTswJgZIWwnUWYF+jYgJGQBYcTHCMNWEhF7g6yWrvVZPsIa2QoiEl8mjKSKhEiziVI5O39FP378/Hf8AOIHMBDpFUODAAAAAElFTkSuQmCC">
+      <h3>STNK</h3>
+    </div>
+    </a>
+  </div>
+  <div class="column">
+    <a href="imunisasi.html">
+      <div class="card blue">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADVUlEQVRYhe2WQWgeRRzFJ7WiYqtQ8WAh6k29SUME0YMlu++9/8xmDcheDMEoNZJqLia0mvTwaTzUXHoTUfGgiMVSRSOGxmoFqYeoKZbe9FDEixhMK03Ug3we3JVh8y0JSL6LHXiwO/tm5vefnfnPONdQJB1MkuTmpu/bXiR9lyTJ7VcBrgL8/wBGRkZuJHmM5CWSiyRv6+b4PWmaPiBpycwmAbztvX++1Wrt7Mro3vsjJFcArAP4ieQlAKskF7oCYGYnJA3Ede12ewfJla4DABiXdEHSBTNbj33e+zuGhoburCv2AOht8PRsCSDP8915nu+V1G9mvzrnXFEUN0j6WNKSpOWaTpIccc45koHkBx08yyQXG8+YTr9A0jKA9fL5MQAzTQGQ/HxiYuI6AKfyPN/dyQNgzHv/7KYAkvpJPm1mz0i67Jxz3vvHJR1pApD07ejo6PVm9mVTlN77p0ge2hQghLAfwCzJl8zsN+ecGxgYuMXMPiP5jqSvSC5IWiI5D+BVktNl27E0Td8E8D6Ac5I+BPA1gHfN7BSA3k0BoqjeInmlei+KYheAKTNbDiEwhHBY0pnBwcFHa5E+QnIBwGwIgWb2RQjhxaIobm2awQ0A7XZ7B4CM5GpVR/IoyddctJpJ7pP0qaR+55zL8/wukoshhP1x/ySPSXp9SwAkD5FcKfV7WXfAzCad+2ebpWmKWCS/IbmH5Hy1CLMseyj2AJgjeXRLM+Ccc5IerGaA5AEAc+Xz2XLrHa8k6Y9Wq7VT0g9FUewh+TDJs7GH5DmSx7cMAOCjag3EANUgNdhfiqK4JgL41x+NMdm4lWu/IDGzlwHMVbug2wD7zOzJEMJYlQe6ChB1ekbSWtcBhoeHb6pWuvd+wyLcdgAA4wDOl1rvOkBV4vvAtgNImiX5fZl8fjSztfJOcLoDwMXSP11J0lqcBwA8YWanYw/JTxqzYV9f37XlHeC98iS8mOf53qIodtUB0jS9F8BUTVfiGShBD8YekvNlKt9YAMyY2WUz+9PM1szsL5Krkk6W3+8uO5iuy8wOe+/fKH1zaZq+0OA7kWXZfR0BSC6QfMXMJitJeg7Az5UnSZJ7OkQ+BWA8uj33ABjr5KsOrKYZ6AUwU1eWZfc3NvqP5W9wxEzB46a4ewAAAABJRU5ErkJggg==">
+        <h3>IMUNISASI/VAKSIN</h3>
+      </div></a>
+        </div>
+
+        <div class="column"><a href="sekolah.html">
+          <div class="card green">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADVUlEQVRYhe2VzWobVxiGx5BFbsCrdBMwxNI5Z86MJM9EP+dPGo00ksYjBcdprC6yycoLE2j3aiCFpiWLlt5DFr6DdNWSQiA0hrTdZdMu0qZQg11F2JHzduFaOMFyXFVNKPiFdzVn5nng+w5jWac5zf81Yi6aZUxdZ0xdF3PR7FuBan3tLE/pKw6RDzhVQ5+oPZ+oPU7V0CHyAaVyWetrZ6fNnXHnjeJUrnMidheYHkqmEfEKOtk62pkaIl6BYhoe00ObiB1O5bo7b5RlWTMTU7PZcN4h4g4ncivD1IsSVagxg3amhmW/hW6hgw+K++0WO7jstZC4NdTsMkpMIcv0C07klkPEndwFc+FEUDEXzTopueZQ/YtL1TBPNQJmsOhWseQ10S20R9BxXcknWPKaiJ0qAmZQYAoOlcMMlT87Kbl25L7YdsnPUP2QUzn0qXppmEHMAywtNHA1n7wROq5X8wku5SI07QrKTMMn6iWnapih+qFtl/yRgEPFc0n353opV8f7F+OJoeN6xY/RydYR8TIk1eBU9EcCnMp1m8gd4Yb9xGtNHX7QxGtBuGH/YFFfG0N43kmpjxyif3CYfK7c6p+LXhPd4pvnPq7dYhuLXhPSCbbttBxwph7bVH9o2+H5Y5fR96P37JRcc6jYcIncq7gBTipzAA2cAC6Re5yo7xnTqzQtcKKb8HpoWuC2ZxBzhSyRCNwAsdfEyqFruFLoIPaaCNwAWSIRc4XbnsFh6L8S+M5EuCdDfCMDfOYbtLnel3ECBE4FWSLR5hqfewbfygBPKnX8XmtNT2AjaGEjaKHfbONZrYUn5TruywBf+AZf+gb3ZWUE7TfbGPzdqQsMDn2830jwLGztQxvtV569FYGTdGoCjyaAPwqmtAM5plcvMvXrItfbd2WEzUYyFrrZSHBXRoi53vKpeppjetWyLKuYNzdpWiC/oD6eSMKyrBlKK9WCLb/2iRr0/HDnpzAegX8MY/T8cMcjclBi+h6llap16Ffs2mL36eMYri12JxUYhfPyuQXbfJJjanPZNduXs2bLY/IPLy1ucV4+d9Q7NC2A3xJMPIaj0uv1zlCqOpSqTq/XO3Pc2f9E4J+EpgW++jR8dwKMqRs21T3G1I13InCa0xyXvwDOo6eZSpfLogAAAABJRU5ErkJggg==">
+            <h3>Sekolah</h3>
+          </div>
+          </a>
+        </div>
+
+        <div class="column"><a href="kesehatan.html">
+          <div class="card red">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAE3klEQVRYhe2XW3ATZRTHU3TUB5+cUR7IZWs3ySKdUskIVDDU6jBTstkmMGlSEKRgAaW0pd20AoEEESjURihQpDSiQBmuo8CDg6O1ARGUqgMil2abQC2O9MsGscEHpPx9qMmkzaZJGR1ePDPnIfn22//vXPZ8uzLZ/yZhZlo+xcRQuQ8NgKXlTk5DuRKtAxhBiKALkc6ZIvHzIvHzIdI5kxBBB2DEAwubafkUlpY7C9TKMk6rLGdpudNMy6dE1sPhmyNFEnCLQeGGSARIelC4IZKAOxy+OXLYACaGyuU0lIvTKssN9KgKTkO5TAyVCyDtn0jDgwVZWjGkcxrFWSOt2mnJffrJlEFiSxAIBJ4Ikc59CSNO4je6zu8v1o/LM6oVbSlDRJoQQNpQ4qc/PwJPrQOeWseQEMGgr4VTq/WcRr5jWCXpT3viG7O0Anzlasw1FKB5/cohIa772pdxasWZlMX7Gy6+5rGRs7QCHm837FUu8IXGZJnoZWkFJMVMGlW+kVGyA6MPuJNFvqHpGDzebni83SllIiGALZuhjFna9MhvACMij1q1lZPs7ohwrNurXJLXnj5xOAqQ0pwgRNBFqOv5xThxYB9irco6AyytwMICEzzebmxoOh4Vu3D2mwHXzs/NweXzp6IAhAi6pAD9E64f4Jz3OJaaWUhZbA+0bHbHrV/6vh2VM6YNKMHtUKAoKcDg7t9YsQg/f3c2TiCSCanIAWCroxpffrJ7AIBI/FXDBhCJgAWvTkaXr0MyE1K2d3M9mtYuj2vCGIC0lEoQ6yvmWHF4R2NS8YZldnxUvyZu/+JpeSC/Xpklk8nSOFp5LiFEbBMO9kanHcX68TjStB3tba0I9fQg1NODdu9XOLqrGUXjMrGvoTZu38X2VpS8MinahBaZ7JGEGUDMYyjlVy+cxs51K+B43QqbbgxsujFwzLGief1KXO/8QXLPqmIbDmyru4VUj+vBg+jMF5/i4Pb66OyPuL2QjU5BKf9wowsbKkrw2f5miCTgTklcJhs4io/tbkRd5ULsqnOief3KAc4XGsFbjHH/R/zgjnp823oUIhF6e3uFZ1IGmEWPkovEzx/YthFVhUbUFJlRYzPh7Vkz0Hp0bzQznlpH0oOo3/18SsKWnJynrBN0l2ZPneq35kz8eu5LE/+0F5rQ5evAtatX0eXrQI1tOs61HU8ZIBj0tViystINjHJBUgBzVmbonfrd8Hi7sca9BxyTAeHiT3BXlqKutASb7GXou3cPaxbOw8Uf25ICBIO+lnLuZa0xQ3mKpVVNBg21OqF4gUZuXjzvLRJ7wCzn38Ub2Qwa+VLgNwFbKt/Eoe1b0LC8GkeaNw0F0CsSPw8gzZChXMDS8iYr86yGzVCetFgsj0kCLKHpxwu0VF9E3FG9tm9JZjrCegaLshnc/eUyGpYuwqEPtiYGCArdUi+lBg21ms1QnrSMHTtqyBLMNnCWsvllt53O9/8qzaTu3dEzuKNnsGdcBirzJqGhZinu9/WhzDg16QtpXH8linywWSdOeG/e6PS7EfE7egYdL6qxqiAfgSuXUc7l/1FhzM+TyZJ/QzywlTynXPfx82rx2iQtyGQtasZQ94tfyArPHD8WnEY1rMgf2F5Tq/hCteqWTa36vWw0Vf6v3Xi45nLJHn1o4v+1/Q1jCU+yKPQuRAAAAABJRU5ErkJggg==">
+            <h3>Kesehatan</h3>
+          </div>
+          </a>
+        </div>
+
+        <div class="column">
+          <a href="pbb.html">
+            <div class="card blue">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC/0lEQVRYhe2UPYicVRSG36yYOEUiZiEGvHvf83e/75tMHJU1IaLGbU0ZnGLRTgxWkgRSaBIrCwsR1j+UWNgIWkiIAYk/kGIFdckqa1xJxEpJSlttBIvMLIOo+zOTNO4Ltzn3O+d9zv3OvcCmNjWCSin3V1V13y037vV6W111zsl5J+ddda7X620d7DfkQ2Z21MyOlizPmdmdYzP35FGyflPUTwGYADBR1E+76oKZFQCIrBecPGlmz7rIJ5H1ibGYm9lsUJZ1Sh8FgJRSK6XUAoBSysEQ+THMnoysF5qmEQAo6i+NDJBSahnt3UKeb5pmEgAqq/Y5edlVv7cpexAAmqaZLOR5F/ndk8dYACLnPSHybZgdG8Qq8nhQFgvZLmQ7KItD+1vC7JiJfNf29t6RAEL16eEOU0o7TfXjIM8Mjr4fbwV5JlTPpZR2AjdOKCg/OO3SugHqut5eRN6PrB9ExA4AMLNHgrJsZrP/ljeYkTrnhwEgInaE6ochcrau6+1rMi9k20WXPPsz/dCEkydddWHwX/9LZlZcdaEiXwCwBQA8+xEXXSpke1UAp31ZWbUPAFT17qL6WZCvR8S2NXUAICK2Ge0Ny/ppt9vd1a+132mXVk+mLNZ1XRt5yCnXjTy8VuO/y8jDTrlekY/3h3V51SRV3R8iF13ko6Bc26j5QEG55lnfc/LziDiwrmQXvQIAluVFV/0pKD87OT89PX07AJjamznnuwDAzHIhXwOApmnEVeeGa2xIw8lNxIxne3uls6kpd8qfnv3Iyve0L0LksRA5a+ShmwpQ1E+H+ishcnEFKuc9Qf4aquf+qcZYAVx0qWmayRD5Ku6JBNyY/sj6S1E/cVMBgnwgRP9w0StO+W1gWJk9byKvBmV5cP3GBlBKOVhE3uobvTx4ETudzm4T/brb7e5y8nJKqWVms676zlgBANzW6XR2A8C9OdvgJgBA0zTVzMzMHcMvZdvbe8cNcOtrbAK46NWifmqU5aJXNwwQEQci61MjrfW+/5v63+kvoEDhrL83LqUAAAAASUVORK5CYII=">
+              <h3>PBB</h3>
+            </div></a>
+              </div>
+
+              <div class="column"><a href="pph.html">
+                <div class="card green">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADQUlEQVRYhe2Wz2sdVRTHr01bbTViWmJtnXe+59fMnemzj9gBpSj42i5Uukrx6cKqm1oQYza2LmKJD0TbXUERtILudNEuFLqIUBCLZOWTQBOEUsR/wkVBqJu+EB82b3yZLIR+YRZz7/ec7+cOM3NvCPf0f5S7TypwXInnlXhegePuPrnpwWVZ7sxUuwb9JRU7mwHTGTCdip11cE+JPyjLcuemhHc6ne1K8oMSf9zpdLYPzrv7/ZnqeSdZ+Lf5DcuIvzbg3WG+VOxMyvxVreEHiFRJfgohbKlg32LQn1sxSm0AGfG5DJiu6neSlzLic7UBpNDL/rgnVf1m1lDgUm0ABr2a5/nuqv48z3cb9GptAA58WbgfrOov3A86cLE2AGN+JVM9X9XvYh9F8ZdrA0iSZIeDlwsrnhjm3e/eNOB6kiQ7agMIIQRVfdbBPVWlu3mKooAz/xqJnqk1vK9odsREbpjITIxxfHU8xnETmTGRGwYc3pTwJEl2GdkpJ1kw8G1nueXgmw6+6Sy3DHzbSRaM7FSSJLtqC25Pth9KiS+kLEtKPJ8Dh4qi2Ntutx9YexVFsTcHDinxfMqylBJfaO3Z8+CGwi0xd/BKSjzbDd2tVeu6obs1JZ518Iol5iOFqyo5eFlEnhqpQQghZX7awcvrvbh305iJXFOio6OG96VER03kWghhrHKRk5wwkS/69ynxrEGvGPSKMX9bluW2EEIwkZn+995sNh9T1bdCCIGIJlKxM6v9gItOcqI6ALhnZo3+/dTU1COu+qoxf9PflFqt1qMG/mvNH2/Mwb0UKFT0MyN7s19vZg0H9yqFx0ZjnzMvDo7n7m0j/Xy1Kdk7Clxyke9XwZmfS1mW7tT/4+zgzIux0dg3FMDMXkiBT4YBOPNiURQw4DoRTdwZvk/Bv2cibw/WO/Bpzvz8cACx1zNgbj2AVoxi4D9T6GVj+aP/uDPmN5zkOwevDB5OM2AuI39tKEAmctLETq8HYMD7GTCXZVluwGFn/jHGOJ4y/+bukynxewZ8OLCw05nIyZEBYozjDjwZQgiqeszdH16zuheJaCKaHQkhhLIst6nqsZEAvNGwKtvuf9V+9+YBIq277z1tWH8DE1q3oznZFVYAAAAASUVORK5CYII=">
+                  <h3>PPh</h3>
+                </div>
+                </a>
+              </div>
+
+              <div class="column"><a href="pdam.html">
+                <div class="card red">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACX0lEQVRYhe2V70sTcRzH30Pn2Ep3t1u22X7ghBIK0u1Rj+77wAcOpf4Dh3MIPhCtf+DuSVSk0/kLJKkEhZ4HPQtDhaDIBz1PAp31pJ4JotnbB9vFbm3uyNOIfMOLg7vv515vjvveAef5h+IB0AUgVGNdqLjObae8CZ7oJgLdeVxs+wI4DlHn2YKzcR2uy1k4G9dR594CHIdovLqDK8k8PNFPAC7Yo3dfWoV4RdzZKnD7M9G1StxaJuKThWPXWuG8sUZ9SbgDb2wq0JxH+12i/Z51ro0S7uZtewoAAoBeAaqqSgCscl3YVaBaSNIo8FdyXoC5XO7sCwghJK9X+hoKRzg0PMJQOEKfouSFENKpy0k66uvrfzxbfsHXa29/sbC4xIaGhgOSjiqjKgpPykDUciUADALQSpFl/4fHE1MmucGDsQkqiv99+UyRFU3TSJK6rhvbtmI8kiRttMbavnf39O729Q+wlOzUbEW5QXZqluUzff0DvNkZp6qqNQt4gi0tm+O5mWMlf0IqnaldQJKkjez03E+75VYLJFpjsW+nIbdaYLC7p3e3dGhmfoGpdMZEdnru+Hdgeu63mVQ6ww4L74DW1z9gkss+30eU/WBkWd54OD5ZUX7/0RgVv/9d+UyRmrvAVCCVzlRcRNLhdDoPnjxfMsnnny7S5XLtn+Q7YKkAACQSCa/s8+2EI9G9oeGR/XAksqcoynYymWyqIrcUywVKcgPAKIDrJxEbWQkEg+zojLOjM85AMEgAK3bc2Eo0VVWpaZoJIYSVp2BPASEEdV03cZYFgMpb58zk5/l/cwQn08zOEY/PdAAAAABJRU5ErkJggg==">
+                  <h3>PAM/PDAM</h3>
+                </div>
+                </a>
+              </div>
+              <div class="column"><a href="neraca.html">
+                <div class="card blue">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADlUlEQVRYhe2WX0xbVRzHv/f2EE4vfy4we29GGClEIzUWyJ5WHjYtHYakrEQsFNbOuQFhZFtkg2wxTjv2MoQR1GcTH/VFX/TBaARp3aZ9IDGyWOLUYS5jY2zJpFvKH38+cBtroX+2dUwTf8kv99yTc87v+/3cm3MO8B+N0ry8vF8AEADS26VbKaC3sbEpMjUVpqmpMDU2NkUAHNlKATskSfodOgG9vWMrBQCA/8TJATp6rI8A+Le6+Daj0XiRsRxijJEkSUEAeUnGPgvgKIDns1Wc5ecX/NTe7osGgiEKBEPk8XhXFEW9CkCIH1hWVmaVJOleS4s7KstF0V22Os1sNkddLteXjyKgucry3N1AMERWaw1ZrTUUCIaourp2zWazfeJ0NgVstjrNXFERNRgYtba1r4VnZukVd9tyVVXV152dna7u7m4pXZGnsf5XW+I7h4aGCsrLyz989eDh1cFz58nj6SCPp4MGz50nn+81MpsrbjudznGv1zfa1dW1z2Qy1XJu/KO5uSXCOV8CUJ2Jw2c450svt7TeLy4ujuzd23Apho5zToqiLtfW7lyJJzA+cZlqanauAtiXsNZ2AIsATunP7UmrHjhwaNBmq9NMJmXF3dpO4ZlZcrvbVi0WS7jD673Q23usqa+vzwhAzM8v+NHj2R+dDHxP4xOXqLVt/58mk+kKAEPCsu8CGNXbowDGkgro6ek92OH1jdrt9h7OjUtpsBXKsvwdY4wYYyTL8kUAuUncq/q7mpZC3MRbSI8t3T4Q7z4WqSnoMQbgQgYTUgkoxT/dxyIthZj7TLClEvAeNrqPRUoKYwBGEvpGsI4zIwG8f8YhON5aYAPTw8yv+TfkwPSw6Bq+w16fOJG4YMy9ktCvYJ1C4nG7qYDcszdeEs9olCrZ8a+Inbx8OhP3sRgG8H4mAgAScv03GjZ179f8htM/fMD6vz0F0N/bNn/zZ7vQ4NeSYuu/8o7YPLKYgC17p+FDYsvmcfwQ2J7wfeB/AU9MQA7n/A1Zlq+KorgK/VIqioY1RVHniopK3gaQ87iKs8LCwtAee33km8kgaXM3aX5+kbS5Bfrtmkafff4F7XnhxRVVVacBsKxX55yfsdvrI9HoMl2fv0Xa3MKGvDZ7nXbvrl8rKXnqbNYFyHLRr5OTAbp95+6mxWP50cefkqqq81krLAjCEvRv/aApCML9bGggh8PxQFlZWRkv5NHi30DgscZfDSE1O2i+QQYAAAAASUVORK5CYII=">
+                  <h3>NERACA</h3>
+                </div>
+                </a>
+              </div>
+              <div class="column"><a href="rekap.html">
+                <div class="card green">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADoUlEQVRYhe2WX0xTdxzFcS9jyR58mw8aMWKmKQ+872Vviy4zYhYwZKJoN4c4G9ZUFEMt9kL7uxQqQiFdaVFKqxNw8cFpk0kCBS20lulYRdHGYlubmligpvbPtccHw6W1hV5aYnzwm5zn87nfc+7v98vL+zQfyxQWnv98yw7F5pxU1PhV1gA/Hb5Uq2wfeay7OD6drWrrro8V8OgNWQHwjw7I3J455DLaixMPthfLCtYMYPKeF0PDTzjrZP3frq08+pv0sUg+4wzg9c1j3DqLRnoIXZo7MF6xc5JGdyeq1t1+8n4sW4taNgl+oHRVO6nGjAALwTBE3RdQ3U9QWd+NXGNRnhueqfiePPSdFWOmTsJU7aK6VwRwe+Yh1GogdRAcbckN4FUoguMCffzqZUvcUk8QlIkxXSdhakvSbCIR4HinOi3AuHUW49ZZ2OyejOaxGIO2JgoalRZTDh/0Peb4zRM0gjIxBLulEzye5MtlO9BnMkPYbAS/xsgCNKgHUd1PUN1PUNGqgGv25YrmnbQUGM3HixsbWIi+HnNcyac9VLliM7cSkiEW4DeqD1IHQblCjiMGAsuE692aX0WSNDcXgoq8M8doPuLmL0CL9kDVdgHa7uF4aYm6OqsS/npGj50CgjOTBMcGlgACgRCr16+j7Jcvmp8/9R2cgxvRIS2LHuJ3iDL+BcuV0O6cQQ0xoIYY0aD+K2XtDMNARai05r1kb1T0e9OuvDys4wSQqYT/3vdyN6dL45WVTZXLGmdVQmULvM/nM5obFGVoVV57xul4TgSIRBi4PfNobTenlFB0i+DHs3JYJlxgGAYd8qXMMZqfZG4y2bjfD4sAkQgDqncAQq0G/JP6pRKKe7GPyMHXyXFsgGBk1Al9V0uS+dTlLUnmUw7f6gFWKqFAtlTCMctTWC02wPp1ytoXzdcUILGENrsHPb1WLATDQPgp2k6XpZhPP/IjEAitXQSJJTzYrkCneoyFeuacwrU/foHJZMP/Dh+e+xbAMG8ArOKNkFjCcDgGt2cuqYTCZiOkDgKpg+BAUxtKSrXou3QX5zpG0N45hiuD93D/Py98vgUEAiHEYjkALI5aa2EBqiR6FmCfsAv1DTdwd9INl+sl/P4g/P4golEm5YDiDLD/5z9br998wOb8/l1gd85A2GyEsNkIsepqitFywxmgoFi5vrBI9m2iyisMho/unfhBAdLFslpR8n+cWQOki2W12saji7My/zQfat4C855I/yC23rkAAAAASUVORK5CYII=">
+                  <h3>REKAP</h3>
+                </div>
+                </a>
+              </div>
+
+              <div class="column"><a href="https://susenas.bpshst.com">
+                <div class="card green">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAAETUlEQVR4nO2aQUwcVRjHf29nAKGGKR4axcY0rWkwpWi6NiRFgpF4MCmaJtaToB6KohyMQcVLaejFg0qUpJZEJVmNaeyhiVUvTbHtag1NSA/FW3vQlB7EqD2oAWbn87C7Cm7Lm3nM213a+SXvwPLm/7755nvv++bNg4SEhISE2xdlS3jHIam9/iuHgV7gnpjlf1fwpdTw2tUx9dtahKw5YMsr8rbAm7b0AVDMuj7dV46qX8wlLLFtQOYEmpWi48oRdT5O7a0DIsv+nFVi7oRUTDaV4AjNrkDcNw/gSr45wqwrtKbg9LaXZJOJlk0H4Ii+31q0ZYHHHOGSK7TWCWcf6JfIa409BwT5ZlP78qSav2ORbifgUiqgxRGmojrBmgOKYWpb++Kkmq/x6a7JR0JLbcBUOoIT1nUEFLk4qebJ5SPBDWjBD+8EbRbYsV9qN9zJYYReVPR8fmFSxZ5pdr8gcyqfYTqnP1HfFX/f0yubfJfTQCsw66To+uHj1esEVzeYt4FRAt4AwFJIR6U2R0YUw0B2z3MrjXL/i4xWEd4Dnl9NS+sAJ6AXQAV0nPssfErr7BNr7vrjb0aa6kFBH9B8047CkzqtMA5oBjgT4eYL11njx+NqEXir0G7Io8+KAE06La0DTFdyWxkg7vH1EWB4I7aKoLjH10eAYSibXhcXYce3FgFfH4s//UUhtgiwuZjZJKzd1hbBShPfIljmCNj/hTj3bWYQGFLCyXc61MsmOrFFQDlX89GspJUwgU+68FM/YOaASmeBKEyclIaFBg6yxBDgLPuXc7NrdFQ8C0ShoZ5z9cG/T30FmVPhSuq+x1dmnfiyQBkc0LgU/2vWupoC9/p0/ak4CCVTgK69ZvVEWLu1GyI29/aKPNyj/uraq4ablmj3fGY8HwotZ6oZ1m69Ayzu7Pyftn1q5sFF2j2fV70cPzf6HDXVCmu31UJo6Hs5IooeBe/+dJXx488o7RNV+T7vF5oxYe22GgFejgMbfTZ7PmNtdzM9mpUbrvQ2CGu31TXA83GWzef0xiUujE/JxAffSKOZYnjC2m2cBTKnJEC3qVoa8Cmgnxp2Abv15pljvRDy/CjmlB/rhdBTTyjt9Dn7VUmUBMBHdSleD2eeOVVRCBXyeHGMmZTwYts+NWOuGJ6qeBdo9JlQih5gbEuOcRUiDcZFVewIbX1aDQKD5grmJDtC1RABlaTiO0Iftuff4wemK7M7XPEscNt/F7h1vgzd4t8Grb0NOgHXnAA+T8sj0a9eG5/ukk4nADdgTtfX3hQIyKAYJkf22ENlDofCAxPI6LpaWwRTPiOpFIiiT612iMEOcwIZyXFozUondoqc2GnvtEelx6/6Qsj2+FVfCtseP4kArQHrpKAxRVsHuMI1V+Db7eXP52e2S2fhWKw2n5sSZgpkIH8oMXt/9eZzU7QOuKuOkesLgGgOJdphDiHj1ceQzxMSEhISEkr4B8TplFyVvpSwAAAAAElFTkSuQmCC">
+                  <h3>Data Maret</h3>
+                </div>
+                </a>
+              </div>
+
+              <div class="column"><a href="https://susenas.bpshst.com/monitoring">
+                <div class="card red">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAABS0lEQVRYCWNgGAUjPQQYaRIAa987MjAy/IObzcz8gsGf7yacj8SgvgPWvd/I8P/vZwYGZhm4PYz/gM5hLmYIETgDF6MJA+TztW+WYJi9/o0Zw9p3KzDEgQJM2ATJFgMHO5LPYQb9Z+ZkYGCUgHGRaeo6ANlkItmjDmAhMqRQlZGQzVA1YvJIdwAsm/1HSmx/fzMyrPlQzMDwH9MGAiKkOQDkc1AeDxaJQTEXlM0Y/5UAU/p0FHEiOKQlQjKyGSE3kOYAQqaRIT/qAOyJkIrZjFCsYDqAytmMNAfQIJsRcgBqIqRBNiPNAYRU00AeNQRoYAEhI0cdAMmGq97xM7AwGgCDS5/hL4MAw7r39mhBBxFnoVAeYu4HhiDBizDzIa3i9e8NgI3oCcDqlAcoAWy7Md6BKYDQMHGGF5TJA81lZLgAdEABqvmjvJEcAgDhwHKompwIQQAAAABJRU5ErkJggg==">
+                  <h3>Progres</h3>
+                </div>
+                </a>
+              </div>
+  </div>
+  
+
+
+</body>
+</html>

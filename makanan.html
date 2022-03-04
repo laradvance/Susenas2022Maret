@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en' class=''>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>Konversi Susenas</title>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link rel="stylesheet" href="style.css">  
+</head>
+
+<body>
+  <div id="app">
+  <form class="vue-form" @submit.prevent="submit">
+    <div class="error-message">
+      <p>Konversi Makanan</p>
+    </div>
+
+    <fieldset>
+
+      <div>
+        <h4>Jenis Bahan Makanan</h4>
+        <vue-single-select
+        v-model="konv"
+        :options="konvs"
+        option-key="id"
+        option-label="nama" 
+        placeholder="Ketik Nomor Urut Komoditas" 
+        :required="true">
+      </vue-single-select>
+      </div>
+      <div>
+        <label class="label" for="harga">Harga Konsumsi (Rp.)</label>
+        <input type="number" onClick="this.select()"  name="harga" id="harga" required="" v-model="harga" ref="harga" min=0>
+      </div>
+
+      <span v-show="konv!=null">
+      <table>
+        <tr>
+          <td><div class="success">
+            <p>{{ komoditas }}</p>
+          </div></td>
+          <td><div v-if="harga!=''" class="warning">
+            <p>{{ jumlah }}</p>
+          </div></td>
+        </tr>
+        <tr>
+          <td><label class="label-result">Pembelian di Produsen: </label></td>
+          <td class="right"><label class="label-result">{{ q1 }}</label></td>
+        </tr>
+        <tr>
+          <td><label class="label-result">Pembelian di Pasar: </label></td>
+          <td class="right"><label class="label-result">{{ q2 }}</label></td>
+        </tr>
+        <tr>
+          <td><label class="label-result">Pembelian di Pengecer: </label></td>
+          <td class="right"><label class="label-result">{{ q3 }}</label></td>
+        </tr>
+      </table>
+      </span>
+    </fieldset>
+  </form>
+
+</div>
+  
+<script src="vue.min.js"></script>
+<script src="select.js"></script>
+<script src="makanan.js"></script> 
+</body>
+
+</html>

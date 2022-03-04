@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang='en' class=''>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>Konversi Susenas</title>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">  
+</head>
+
+<body>
+  <div id="app">
+  <form class="vue-form" @submit.prevent="submit">
+    <div class="error-message">
+      <p>Neraca</p>
+    </div>
+
+    <fieldset>
+
+      <div>
+        <h4>Jenis Penyeimbang</h4>
+        <p class="select">
+          <select class="budget" v-model="jenis" @change="clear()">
+            <option value="n">Transaksi Keuangan</option>
+						<option value="t">Transfer Masuk</option>
+						<option value="l">Pendapatan Kepemilikan</option>            
+					</select>
+        </p>
+      </div>
+      <div class="warning">
+        <p>Diambil dari KP Blok IV</p>
+      </div>
+      <div class="success">
+        <p v-if="jenis=='t'">Total Jumlah Rincian Bertanda T</p>
+        <p v-if="jenis=='l'">Total Jumlah Rincian Bertanda L</p>
+        <p v-if="jenis=='n'">Total Jumlah Rincian Bertanda N</p>
+      </div>
+      <div>
+        <label class="label" for="minggu">Seminggu yang lalu (Rp.)</label>
+        <input type="number" onClick="this.select()"  name="minggu" id="minggu" required="" v-model="minggu" ref="minggu" min=0>
+      </div>
+      <div>
+        <label class="label" for="bulan">Sebulan yang lalu (Rp.)</label>
+        <input type="number" onClick="this.select()"  name="bulan" id="bulan" required="" v-model="bulan" ref="bulan" min=0>
+      </div>
+      <div>
+        <label class="label" for="tahun">Setahun yang lalu (Rp.)</label>
+        <input type="number" onClick="this.select()"  name="tahun" id="tahun" required="" v-model="tahun" ref="tahun" min=0>
+      </div>
+
+      <div v-if="jenis=='n'" class="warning">
+        <p>Diambil dari KP Blok IV.3.3</p>
+      </div>   
+      <div v-if="jenis=='n'">
+        <label class="label" for="konsumsi">Konsumsi Sebulan (Blok IV.3.3 rincian 9 kolom 3)</label>
+        <input type="number" onClick="this.select()"  name="konsumsi" id="konsumsi" required="" v-model="konsumsi" ref="konsumsi" min=0>
+      </div>  
+      
+      <div v-if="jenis=='n'" class="warning">
+        <p>Diambil dari KP Blok VA</p>
+      </div>   
+      <div v-if="jenis=='n'">
+        <label class="label" for="gaji">Total Upah/Gaji (Blok VA baris jumlah kolom 5 + kolom 6 + kolom 7)</label>
+        <input type="number" onClick="this.select()"  name="gaji" id="gaji" required="" v-model="gaji" ref="gaji" min=0>
+      </div>  
+
+      <div v-if="jenis=='n'" class="warning">
+        <p>Diambil dari KP Blok VB</p>
+      </div>   
+      <div v-if="jenis=='n'">
+        <label class="label" for="usaha">Total Hasil Usaha (Blok VB baris jumlah kolom 6)</label>
+        <input type="number" onClick="this.select()"  name="usaha" id="usaha" required="" v-model="usaha" ref="usaha" min=0>
+      </div> 
+
+      <div v-if="jenis=='n'" class="warning">
+        <p>Diambil dari KP Blok VC rincian 1 kolom 3</p>
+      </div>   
+      <div v-if="jenis=='n'">
+        <label class="label" for="kepemilikan">Pendapatan Kepemilikan (Blok VC rincian 1 kolom 3)</label>
+        <input type="number" onClick="this.select()"  name="kepemilikan" id="kepemilikan" required="" v-model="kepemilikan" ref="kepemilikan" min=0>
+      </div> 
+
+      <div v-if="jenis=='n'" class="warning">
+        <p>Diambil dari KP Blok VD sesuai jawaban responden (Sebelum dijumlahkan dengan imputasi)</p>
+      </div>   
+      <br/>
+      <div v-if="jenis=='n'">
+        <label class="label" for="d1">Transfer Masuk(Blok VD rincian 1 kolom 2  Khusus UANG)</label>
+        <input type="number" onClick="this.select()"  name="d1" id="d1" required="" v-model="d1" ref="d1" min=0>
+      </div> 
+      <div v-if="jenis=='n'">
+        <label class="label" for="d2b">Meminjam Uang(Blok VD rincian 3b kolom 2 KHUSUS UANG)</label>
+        <input type="number" onClick="this.select()"  name="d2b" id="d2b" required="" v-model="d2b" ref="d2b" min=0>
+      </div> 
+      <div v-if="jenis=='n'">
+        <label class="label" for="d2c">Terima pembayaran kredit barang(Blok VD rincian 3c kolom 2)</label>
+        <input type="number" onClick="this.select()"  name="d2c" id="d2c" required="" v-model="d2c" ref="d2c" min=0>
+      </div> 
+      <div v-if="jenis=='n'">
+        <label class="label" for="d2e">Lainnya(Blok VD rincian 3e kolom 2 yang KONTAN)</label>
+        <input type="number" onClick="this.select()"  name="d2e" id="d2e" required="" v-model="d2e" ref="d2e" min=0>
+      </div> 
+
+      <div v-if="jenis=='n'">
+        <label class="label" for="d1k">Transfer Keluar(Blok VD rincian 1 kolom 4 khusus UANG)</label>
+        <input type="number" onClick="this.select()"  name="d1k" id="d1k" required="" v-model="d1k" ref="d1k" min=0>
+      </div> 
+      <div v-if="jenis=='n'">
+        <label class="label" for="d2bk">Membayar Hutang(Blok VD rincian 3b kolom 4)</label>
+        <input type="number" onClick="this.select()"  name="d2bk" id="d2bk" required="" v-model="d2bk" ref="d2bk" min=0>
+      </div> 
+      <div v-if="jenis=='n'">
+        <label class="label" for="d2ck">Membayar kredit barang(Blok VD rincian 3d kolom 4)</label>
+        <input type="number" onClick="this.select()"  name="d2ck" id="d2ck" required="" v-model="d2ck" ref="d2ck" min=0>
+      </div> 
+      <div v-if="jenis=='n'">
+        <label class="label" for="d2ek">Lainnya(Blok VD rincian 3e kolom 4 yang KONTAN)</label>
+        <input type="number" onClick="this.select()"  name="d2ek" id="d2ek" required="" v-model="d2ek" ref="d2ek" min=0>
+      </div> 
+
+      <div class="success">
+        <p v-if="jenis=='t'">Perkiraan nilai transfer masuk</p>
+        <p v-if="jenis=='l'">Perkiraan Nilai Pendapatan Kepemilikan</p>
+        <p v-if="jenis=='n'">Perkiraan Nilai Transaksi Keuangan</p>
+      </div>
+      <table>
+        <tr v-if="jenis=='t'">
+          <td><label class="label-result">Tambahkan Blok VD rincian 1 Kolom 2 dengan:</label></td>
+          <td class="right"><label class="label-result">{{ jumlah }}</label></td>
+        </tr>
+        <tr v-if="jenis=='l'">
+          <td><label class="label-result">Tambahkan Blok VC rincian 3a Kolom 3 dengan:</label></td>
+          <td class="right"><label class="label-result">{{ jumlah }}</label></td>
+        </tr>
+        <tr v-if="jenis=='n'">
+          <td><label class="label-result">Tambahkan Blok VD rincian 3a Kolom 4 dengan:</label></td>
+          <td class="right"><label class="label-result">{{ menabung }}</label></td>
+        </tr>
+        <tr v-if="jenis=='n'">
+          <td><label class="label-result">Tambahkan Blok VD rincian 3a Kolom 2 dengan:</label></td>
+          <td class="right"><label class="label-result">{{ ambil }}</label></td>
+        </tr>
+      </table>
+    </fieldset>
+  </form>
+
+</div>
+  
+<script src="vue.min.js"></script>
+<script src="neraca.js"></script> 
+</body>
+
+</html>
