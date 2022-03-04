@@ -18,31 +18,242 @@
     </div>
 
     <fieldset>
-
-      <div>
-        <h4>Jenis Penyeimbang</h4>
-        <p class="select">
-          <select class="budget" v-model="jenis" @change="clear()">
-            <option value="n">Transaksi Keuangan</option>
-						<option value="t">Transfer Masuk</option>
-						<option value="l">Pendapatan Kepemilikan</option>            
-					</select>
-        </p>
+      <div class="success">
+        <p>Diambil dari Lembar Pembantu</p>
       </div>
       <div class="warning">
-        <p>Diambil dari KP Blok IV</p>
+        <p>Blok IV.1 Makanan</p>
       </div>
-      <div class="success">
-        <p v-if="jenis=='t'">Total Jumlah Rincian Bertanda T</p>
-        <p v-if="jenis=='l'">Total Jumlah Rincian Bertanda L</p>
-        <p v-if="jenis=='n'">Total Jumlah Rincian Bertanda N</p>
-      </div>
-      <div>
-        <label class="label" for="minggu">Seminggu yang lalu (Rp.)</label>
+      <table>
+        <tr>
+          <td><label class="label">U:</label></td>
+          <td><label class="label">T1A:</label></td>
+        </tr>
+        <tr>
+          <td> <input type="number" onClick="this.select()"  name="u41" id="u41" required="" v-model="u41" ref="u41" min=0></td>
+          <td> <input type="number" onClick="this.select()"  name="t1a41" id="t1a41" required="" v-model="t1a41" ref="t1a41" min=0></td>
+        </tr>
+        <tr>
+          <td><label class="label">T1B:</label></td>
+          <td><label class="label">T2:</label></td>
+        </tr>
+        <tr>
+          <td> <input type="number" onClick="this.select()"  name="t1b41" id="t1b41" required="" v-model="t1b41" ref="t1b41" min=0></td>
+          <td> <input type="number" onClick="this.select()"  name="t241" id="t241" required="" v-model="t241" ref="t241" min=0></td>
+        </tr>
+        <tr>
+          <td><label class="label">T3:</label></td>
+          <td><label class="label">T4:</label></td>
+        </tr>
+        <tr>
+          <td> <input type="number" onClick="this.select()"  name="t341" id="t341" required="" v-model="t341" ref="t341" min=0></td>
+          <td> <input type="number" onClick="this.select()"  name="t441" id="t441" required="" v-model="t441" ref="t441" min=0></td>
+        </tr>
+        <tr>
+          <td><label class="label">T5:</label></td>
+          <td><label class="label">L:</label></td>
+        </tr>
+        <tr>
+          <td> <input type="number" onClick="this.select()"  name="t541" id="t541" required="" v-model="t541" ref="t541" min=0></td>
+          <td> <input type="number" onClick="this.select()"  name="l41" id="l41" required="" v-model="l41" ref="l41" min=0></td>
+        </tr>
+        <tr>
+          <td><label class="label">N:</label></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td> <input type="number" onClick="this.select()"  name="n41" id="n41" required="" v-model="n41" ref="n41" min=0></td>
+          <td> </td>
+        </tr>
+        </table>
+        <div class="warning">
+          <p>Blok IV.2 Non Makanan kolom 4 (Sebulan)</p>
+        </div>
+        <table>
+          <tr>
+            <td><label class="label">U:</label></td>
+            <td><label class="label">K:</label></td>
+          </tr>
+          <tr>
+            <td> <input type="number" onClick="this.select()"  name="u41" id="u41" required="" v-model="u41" ref="u41" min=0></td>
+            <td> <input type="number" onClick="this.select()"  name="t1a41" id="t1a41" required="" v-model="t1a41" ref="t1a41" min=0></td>
+          </tr>
+          <tr>
+            <td><label class="label">T1A:</label></td>
+            <td><label class="label">T1B:</label></td>
+          </tr>
+          <tr>
+            <td> <input type="number" onClick="this.select()"  name="t1b41" id="t1b41" required="" v-model="t1b41" ref="t1b41" min=0></td>
+            <td> <input type="number" onClick="this.select()"  name="t241" id="t241" required="" v-model="t241" ref="t241" min=0></td>
+          </tr>
+          <tr>
+            <td><label class="label">T2:</label></td>
+            <td><label class="label">T3:</label></td>
+          </tr>
+          <tr>
+            <td> <input type="number" onClick="this.select()"  name="t341" id="t341" required="" v-model="t341" ref="t341" min=0></td>
+            <td> <input type="number" onClick="this.select()"  name="t441" id="t441" required="" v-model="t441" ref="t441" min=0></td>
+          </tr>
+          <tr>
+            <td><label class="label">T4:</label></td>
+            <td><label class="label">T5:</label></td>
+          </tr>
+          <tr>
+            <td> <input type="number" onClick="this.select()"  name="t541" id="t541" required="" v-model="t541" ref="t541" min=0></td>
+            <td> <input type="number" onClick="this.select()"  name="l41" id="l41" required="" v-model="l41" ref="l41" min=0></td>
+          </tr>
+          <tr>
+            <td><label class="label">L:</label></td>
+            <td><label class="label">N:</label></td>
+          </tr>
+          <tr>
+            <td> <input type="number" onClick="this.select()"  name="n41" id="n41" required="" v-model="n41" ref="n41" min=0></td>
+            <td> <input type="number" onClick="this.select()"  name="l41" id="l41" required="" v-model="l41" ref="l41" min=0></td>
+          </tr>
+          </table>
+          <div class="warning">
+            <p>Blok IV.2 Non Makanan kolom 5 (Setahun)</p>
+          </div>
+          <table>
+            <tr>
+              <td><label class="label">U:</label></td>
+              <td><label class="label">K:</label></td>
+            </tr>
+            <tr>
+              <td> <input type="number" onClick="this.select()"  name="u41" id="u41" required="" v-model="u41" ref="u41" min=0></td>
+              <td> <input type="number" onClick="this.select()"  name="t1a41" id="t1a41" required="" v-model="t1a41" ref="t1a41" min=0></td>
+            </tr>
+            <tr>
+              <td><label class="label">T1A:</label></td>
+              <td><label class="label">T1B:</label></td>
+            </tr>
+            <tr>
+              <td> <input type="number" onClick="this.select()"  name="t1b41" id="t1b41" required="" v-model="t1b41" ref="t1b41" min=0></td>
+              <td> <input type="number" onClick="this.select()"  name="t241" id="t241" required="" v-model="t241" ref="t241" min=0></td>
+            </tr>
+            <tr>
+              <td><label class="label">T2:</label></td>
+              <td><label class="label">T3:</label></td>
+            </tr>
+            <tr>
+              <td> <input type="number" onClick="this.select()"  name="t341" id="t341" required="" v-model="t341" ref="t341" min=0></td>
+              <td> <input type="number" onClick="this.select()"  name="t441" id="t441" required="" v-model="t441" ref="t441" min=0></td>
+            </tr>
+            <tr>
+              <td><label class="label">T4:</label></td>
+              <td><label class="label">T5:</label></td>
+            </tr>
+            <tr>
+              <td> <input type="number" onClick="this.select()"  name="t541" id="t541" required="" v-model="t541" ref="t541" min=0></td>
+              <td> <input type="number" onClick="this.select()"  name="l41" id="l41" required="" v-model="l41" ref="l41" min=0></td>
+            </tr>
+            <tr>
+              <td><label class="label">L:</label></td>
+              <td><label class="label">N:</label></td>
+            </tr>
+            <tr>
+              <td> <input type="number" onClick="this.select()"  name="n41" id="n41" required="" v-model="n41" ref="n41" min=0></td>
+              <td> <input type="number" onClick="this.select()"  name="l41" id="l41" required="" v-model="l41" ref="l41" min=0></td>
+            </tr>
+            </table>
+            <div class="warning">
+              <p>Blok VC</p>
+            </div>
+            <table>
+              <tr>
+                <td><label class="label">D di kolom 3:</label></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td> <input type="number" onClick="this.select()"  name="n41" id="n41" required="" v-model="n41" ref="n41" min=0></td>
+                <td> </td>
+              </tr>
+              </table>
+              <div class="warning">
+                <p>Blok VD</p>
+              </div>
+              <table>
+                <tr>
+                  <td><label class="label">D di kolom 2:</label></td>
+                  <td><label class="label">D di kolom 3:</label></td>
+                </tr>
+                <tr>
+                  <td> <input type="number" onClick="this.select()"  name="t541" id="t541" required="" v-model="t541" ref="t541" min=0></td>
+                  <td> <input type="number" onClick="this.select()"  name="l41" id="l41" required="" v-model="l41" ref="l41" min=0></td>
+                </tr>
+              </table>
+              <div class="warning">
+                  <p>Blok VG</p>
+                </div>
+                <table>
+                  <tr>
+                    <td><label class="label">D di kolom 2:</label></td>
+                    <td><label class="label">D di kolom 3:</label></td>
+                  </tr>
+                  <tr>
+                    <td> <input type="number" onClick="this.select()"  name="t541" id="t541" required="" v-model="t541" ref="t541" min=0></td>
+                    <td> <input type="number" onClick="this.select()"  name="l41" id="l41" required="" v-model="l41" ref="l41" min=0></td>
+                  </tr>
+              </table>
+
+              <div class="success">
+                <p>Diambil dari Dokumen KP</p>
+              </div>
+              <div class="warning">
+                <p>Blok VA</p>
+              </div>
+                <table>
+                  <tr>
+                    <td><label class="label">Kolom 5 baris Jumlah:</label></td>
+                    <td><label class="label">Kolom 6 baris Jumlah:</label></td>
+                  </tr>
+                  <tr>
+                    <td> <input type="number" onClick="this.select()"  name="t541" id="t541" required="" v-model="t541" ref="t541" min=0></td>
+                    <td> <input type="number" onClick="this.select()"  name="l41" id="l41" required="" v-model="l41" ref="l41" min=0></td>
+                  </tr>
+                  <tr>
+                    <td><label class="label">Kolom 7 baris Jumlah:</label></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td> <input type="number" onClick="this.select()"  name="t541" id="t541" required="" v-model="t541" ref="t541" min=0></td>
+                    <td> </td>
+                  </tr>
+                </table>
+                <div class="warning">
+                  <p>Blok VB</p>
+                </div>
+                  <table>
+                    <tr>
+                      <td><label class="label">Kolom 7 baris Jumlah:</label></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td> <input type="number" onClick="this.select()"  name="t541" id="t541" required="" v-model="t541" ref="t541" min=0></td>
+                      <td> </td>
+                    </tr>
+                  </table>
+                  <div class="warning">
+                    <p>Blok VE</p>
+                  </div>
+                    <table>
+                      <tr>
+                        <td><label class="label">Kolom 2 baris Jumlah:</label></td>
+                        <td><label class="label">Kolom 4 baris Jumlah:</label></td>
+                      </tr>
+                      <tr>
+                        <td> <input type="number" onClick="this.select()"  name="t541" id="t541" required="" v-model="t541" ref="t541" min=0></td>
+                        <td> <input type="number" onClick="this.select()"  name="t541" id="t541" required="" v-model="t541" ref="t541" min=0></td>
+                      </tr>
+                    </table>
+
+//lihat dok asli choy
+      <!-- <div>
+        <label class="label" for="minggu">Seminggu yang lalu (Rp.):</label>
         <input type="number" onClick="this.select()"  name="minggu" id="minggu" required="" v-model="minggu" ref="minggu" min=0>
       </div>
       <div>
-        <label class="label" for="bulan">Sebulan yang lalu (Rp.)</label>
+        <label class="label" for="bulan">Sebulan yang lalu (Rp.):</label>
         <input type="number" onClick="this.select()"  name="bulan" id="bulan" required="" v-model="bulan" ref="bulan" min=0>
       </div>
       <div>
@@ -142,7 +353,7 @@
           <td><label class="label-result">Tambahkan Blok VD rincian 3a Kolom 2 dengan:</label></td>
           <td class="right"><label class="label-result">{{ ambil }}</label></td>
         </tr>
-      </table>
+      </table> -->
     </fieldset>
   </form>
 

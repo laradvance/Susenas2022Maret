@@ -60,7 +60,7 @@
           <td class="right"><label class="label-result">{{ jumlah }}</label></td>
         </tr>
         <tr v-if="jenis=='0'">
-          <td><label class="label-result">Jumlah yang ditandai T1B: </label></td>
+          <td><label class="label-result">Jumlah yang ditandai T1B dan N: </label></td>
           <td class="right"><label class="label-result">{{ transfer }}</label></td>
         </tr>
         <tr v-if="jenis=='1'">
@@ -69,7 +69,7 @@
         </tr>
       </table>
 
-      <div class="warning">
+      <div class="success">
         <p>Kepesertaan kurang dari 1 tahun</p>
       </div>
       
@@ -98,7 +98,7 @@
           <td class="right"><label class="label-result">5% dari Gaji Pokok/bulan</label></td>
         </tr>
         <tr v-if="jenis=='0'">
-          <td colspan="2"><div  class="warning"><p>Jumlah yang diberi tanda T1B</p></div></td>
+          <td colspan="2"><div  class="warning"><p>Jumlah yang diberi tanda T1B dan N</p></div></td>
         </tr>
         <tr v-if="jenis=='0'">
           <td><label class="label-result">PBI: </label></td>
