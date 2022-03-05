@@ -86,8 +86,7 @@ header h1 {
 }
 .vue-form h4,
 .vue-form .label {
-  color: #94aab0;
-  margin-bottom: 10px;
+  color: #4990a1;
 }
 .vue-form .label {
   display: block;
@@ -128,7 +127,8 @@ header h1 {
 }
 
 .vue-form input[type="number"] {
-  text-align: right;
+  text-align: right;  
+  margin-bottom: 15px;
 }
 .vue-form .select {
   position: relative;
@@ -411,4 +411,19 @@ table{
 .sum {
   background-color: #cccfcf;
 }
+
+table {
+  border-collapse: separate;
+}
+
+td {
+  border-bottom: 1pt dashed rgb(120, 121, 122);
+}
+
+td.noborder {
+  border-bottom: 0pt dashed rgb(122, 120, 120);
+}
+
+
+
 
