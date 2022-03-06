@@ -28,7 +28,7 @@
       </div>
       <div>
         <label class="label" for="harga">Harga Beli Baru</label>
-        <input type="number" onClick="this.select()"  name="harga" id="harga" required="" v-model="harga" ref="harga" min=0>
+        <currency inputmode="numeric" onClick="this.select()"  name="harga" id="harga" required="" v-model="harga" ref="harga"></currency>
       </div>
       <div>
         <h4>Kondisi Perpajakan</h4>

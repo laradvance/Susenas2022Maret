@@ -32,7 +32,7 @@
       </div>
       <div>
         <label class="label" for="harga">Harga Konsumsi (Rp.)</label>
-        <input type="number" onClick="this.select()"  name="harga" id="harga" required="" v-model="harga" ref="harga" min=0>
+        <currency inputmode="numeric" v-model="harga" name="harga" id="harga" required="" ref="harga" onClick="this.select()" ></currency>
       </div>
 
       <span v-show="konv!=null">

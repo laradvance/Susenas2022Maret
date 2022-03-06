@@ -28,122 +28,149 @@
       </div>
 
       <table>
-        <tr>
-          <td><div class="warning">
-            <p>Pembelian (kolom 6)</p>
-          </div></td>
-          <td><div class="warning">
-            <p>Produksi(Kolom 8)</p>
-          </div></td>
-        </tr>
+
         <tr>
           <td class="noborder" colspan="2"><label class="label">A. PADI - PADIAN (R1)</label></td>
         </tr>
-
         <tr>
-          <td><input type="number" onClick="this.select()"  name="r1b" id="r1b" required="" v-model="r1b" ref="r1b" min=0></td>
-          <td><input type="number" onClick="this.select()"  name="r1p" id="r1p" required="" v-model="r1p" ref="r1p" min=0></td>
+          <td class="noborder"><label>Pembelian (Kolom 6)</label></td>
+          <td class="noborder"><label>Produksi (Kolom 8)</label></td>
+        </tr>
+        <tr>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r1b" id="r1b" required="" v-model="r1b" ref="r1b"></currency></td>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r1p" id="r1p" required="" v-model="r1p" ref="r1p"></currency></td>
         </tr>
 
         <tr>
           <td class="noborder" colspan="2"><label class="label">B. UMBI-UMBIAN (R8)</label></td>
         </tr>
-
         <tr>
-          <td><input type="number" onClick="this.select()"  name="r8b" id="r8b" required="" v-model="r8b" ref="r8b" min=0></td>
-          <td><input type="number" onClick="this.select()"  name="r8p" id="r8p" required="" v-model="r8p" ref="r8p" min=0></td>
+          <td class="noborder"><label>Pembelian (Kolom 6)</label></td>
+          <td class="noborder"><label>Produksi (Kolom 8)</label></td>
+        </tr>
+        <tr>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r8b" id="r8b" required="" v-model="r8b" ref="r8b"></currency></td>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r8p" id="r8p" required="" v-model="r8p" ref="r8p"></currency></td>
         </tr>
 
         <tr>
           <td class="noborder" colspan="2"><label class="label">C. IKAN/UDANG/CUMI/KERANG (R16)</label></td>
         </tr>
-
         <tr>
-          <td><input type="number" onClick="this.select()"  name="r16b" id="r16b" required="" v-model="r16b" ref="r16b" min=0></td>
-          <td><input type="number" onClick="this.select()"  name="r16p" id="r16p" required="" v-model="r16p" ref="r16p" min=0></td>
+          <td class="noborder"><label>Pembelian (Kolom 6)</label></td>
+          <td class="noborder"><label>Produksi (Kolom 8)</label></td>
         </tr>
-
-        
+        <tr>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r16b" id="r16b" required="" v-model="r16b" ref="r16b"></currency></td>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r16p" id="r16p" required="" v-model="r16p" ref="r16p"></currency></td>
+        </tr>        
         <tr>
           <td class="noborder" colspan="2"><label class="label">D. DAGING (R55)</label></td>
         </tr>
-
         <tr>
-          <td><input type="number" onClick="this.select()"  name="r52b" id="r52b" required="" v-model="r52b" ref="r52b" min=0></td>
-          <td><input type="number" onClick="this.select()"  name="r52p" id="r52p" required="" v-model="r52p" ref="r52p" min=0></td>
+          <td class="noborder"><label>Pembelian (Kolom 6)</label></td>
+          <td class="noborder"><label>Produksi (Kolom 8)</label></td>
+        </tr>
+        <tr>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r52b" id="r52b" required="" v-model="r52b" ref="r52b"></currency></td>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r52p" id="r52p" required="" v-model="r52p" ref="r52p"></currency></td>
         </tr>       
         
         <tr>
           <td class="noborder" colspan="2"><label class="label">E. TELUR DAN SUSU (R65)</label></td>
         </tr>
-
         <tr>
-          <td><input type="number" onClick="this.select()"  name="r62b" id="r62b" required="" v-model="r62b" ref="r62b" min=0></td>
-          <td><input type="number" onClick="this.select()"  name="r62p" id="r62p" required="" v-model="r62p" ref="r62p" min=0></td>
+          <td class="noborder"><label>Pembelian (Kolom 6)</label></td>
+          <td class="noborder"><label>Produksi (Kolom 8)</label></td>
+        </tr>
+        <tr>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r62b" id="r62b" required="" v-model="r62b" ref="r62b"></currency></td>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r62p" id="r62p" required="" v-model="r62p" ref="r62p"></currency></td>
         </tr>   
         
         <tr>
           <td class="noborder" colspan="2"><label class="label">F. SAYUR-SAYURAN (R75)</label></td>
         </tr>
-
         <tr>
-          <td><input type="number" onClick="this.select()"  name="r72b" id="r72b" required="" v-model="r72b" ref="r72b" min=0></td>
-          <td><input type="number" onClick="this.select()"  name="r72p" id="r72p" required="" v-model="r72p" ref="r72p" min=0></td>
+          <td class="noborder"><label>Pembelian (Kolom 6)</label></td>
+          <td class="noborder"><label>Produksi (Kolom 8)</label></td>
+        </tr>
+        <tr>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r72b" id="r72b" required="" v-model="r72b" ref="r72b"></currency></td>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r72p" id="r72p" required="" v-model="r72p" ref="r72p"></currency></td>
         </tr>  
 
         <tr>
           <td class="noborder" colspan="2"><label class="label">G. KACANG-KACANGAN (R102)</label></td>
         </tr>
-
         <tr>
-          <td><input type="number" onClick="this.select()"  name="r98b" id="r98b" required="" v-model="r98b" ref="r98b" min=0></td>
-          <td><input type="number" onClick="this.select()"  name="r98p" id="r98p" required="" v-model="r98p" ref="r98p" min=0></td>
+          <td class="noborder"><label>Pembelian (Kolom 6)</label></td>
+          <td class="noborder"><label>Produksi (Kolom 8)</label></td>
+        </tr>
+        <tr>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r98b" id="r98b" required="" v-model="r98b" ref="r98b"></currency></td>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r98p" id="r98p" required="" v-model="r98p" ref="r98p"></currency></td>
         </tr>  
 
         <tr>
           <td class="noborder" colspan="2"><label class="label">H. BUAH-BUAHAN (R110)</label></td>
         </tr>
-
         <tr>
-          <td><input type="number" onClick="this.select()"  name="r106b" id="r106b" required="" v-model="r106b" ref="r106b" min=0></td>
-          <td><input type="number" onClick="this.select()"  name="r106p" id="r106p" required="" v-model="r106p" ref="r106p" min=0></td>
+          <td class="noborder"><label>Pembelian (Kolom 6)</label></td>
+          <td class="noborder"><label>Produksi (Kolom 8)</label></td>
+        </tr>
+        <tr>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r106b" id="r106b" required="" v-model="r106b" ref="r106b"></currency></td>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r106p" id="r106p" required="" v-model="r106p" ref="r106p"></currency></td>
         </tr> 
 
         <tr>
           <td class="noborder" colspan="2"><label class="label">I. MINYAK DAN KELAPA (R126)</label></td>
         </tr>
-
         <tr>
-          <td><input type="number" onClick="this.select()"  name="r120b" id="r120b" required="" v-model="r120b" ref="r120b" min=0></td>
-          <td><input type="number" onClick="this.select()"  name="r120p" id="r120p" required="" v-model="r120p" ref="r120p" min=0></td>
+          <td class="noborder"><label>Pembelian (Kolom 6)</label></td>
+          <td class="noborder"><label>Produksi (Kolom 8)</label></td>
+        </tr>
+        <tr>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r120b" id="r120b" required="" v-model="r120b" ref="r120b"></currency></td>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r120p" id="r120p" required="" v-model="r120p" ref="r120p"></currency></td>
         </tr> 
 
         <tr>
           <td class="noborder" colspan="2"><label class="label">J. BAHAN MINUMAN (R131)</label></td>
         </tr>
-
         <tr>
-          <td><input type="number" onClick="this.select()"  name="r125b" id="r125b" required="" v-model="r125b" ref="r125b" min=0></td>
-          <td><input type="number" onClick="this.select()"  name="r125p" id="r125p" required="" v-model="r125p" ref="r125p" min=0></td>
+          <td class="noborder"><label>Pembelian (Kolom 6)</label></td>
+          <td class="noborder"><label>Produksi (Kolom 8)</label></td>
+        </tr>
+        <tr>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r125b" id="r125b" required="" v-model="r125b" ref="r125b"></currency></td>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r125p" id="r125p" required="" v-model="r125p" ref="r125p"></currency></td>
         </tr> 
 
         
         <tr>
           <td class="noborder" colspan="2"><label class="label">K. BUMBU-BUMBUAN (R139)</label></td>
         </tr>
-
         <tr>
-          <td><input type="number" onClick="this.select()"  name="r133b" id="r133b" required="" v-model="r133b" ref="r133b" min=0></td>
-          <td><input type="number" onClick="this.select()"  name="r133p" id="r133p" required="" v-model="r133p" ref="r133p" min=0></td>
+          <td class="noborder"><label>Pembelian (Kolom 6)</label></td>
+          <td class="noborder"><label>Produksi (Kolom 8)</label></td>
+        </tr>
+        <tr>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r133b" id="r133b" required="" v-model="r133b" ref="r133b"></currency></td>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r133p" id="r133p" required="" v-model="r133p" ref="r133p"></currency></td>
         </tr> 
 
         <tr>
           <td class="noborder" colspan="2"><label class="label">L. BAHAN MAKANAN LAINNYA (R154)</label></td>
         </tr>
-
         <tr>
-          <td><input type="number" onClick="this.select()"  name="r146b" id="r146b" required="" v-model="r146b" ref="r146b" min=0></td>
-          <td><input type="number" onClick="this.select()"  name="r146p" id="r146p" required="" v-model="r146p" ref="r146p" min=0></td>
+          <td class="noborder"><label>Pembelian (Kolom 6)</label></td>
+          <td class="noborder"><label>Produksi (Kolom 8)</label></td>
+        </tr>
+        <tr>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r146b" id="r146b" required="" v-model="r146b" ref="r146b"></currency></td>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r146p" id="r146p" required="" v-model="r146p" ref="r146p"></currency></td>
         </tr> 
         
         </table>
@@ -160,8 +187,8 @@
           <td class="noborder"><label class="label">Setahun (R198 kolom 5)</label></td>
         </tr>
         <tr>
-          <td><input type="number" onClick="this.select()"  name="r189a" id="r189a" required="" v-model="r189a" ref="r189a" min=0></td>
-          <td><input type="number" onClick="this.select()"  name="r189b" id="r189b" required="" v-model="r189b" ref="r189b" min=0></td>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r189a" id="r189a" required="" v-model="r189a" ref="r189a"></currency></td>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r189b" id="r189b" required="" v-model="r189b" ref="r189b"></currency></td>
         </tr>
         <tr>
           <td class="noborder" colspan="2"><label class="label">B. ANEKA BARANG DAN JASA</label></td>
@@ -171,8 +198,8 @@
           <td class="noborder"><label class="label">Setahun (R240 kolom 5)</label></td>
         </tr>
         <tr>
-          <td><input type="number" onClick="this.select()"  name="r231a" id="r231a" required="" v-model="r231a" ref="r231a" min=0></td>
-          <td><input type="number" onClick="this.select()"  name="r231b" id="r231b" required="" v-model="r231b" ref="r231b" min=0></td>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r231a" id="r231a" required="" v-model="r231a" ref="r231a"></currency></td>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r231b" id="r231b" required="" v-model="r231b" ref="r231b"></currency></td>
         </tr>
 
         <tr>
@@ -184,7 +211,7 @@
         </tr>
         <tr>
           <td></td>
-          <td><input type="number" onClick="this.select()"  name="r270" id="r270" required="" v-model="r270" ref="r270" min=0></td>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r270" id="r270" required="" v-model="r270" ref="r270"></currency></td>
         </tr>
 
         <tr>
@@ -196,7 +223,7 @@
         </tr>
         <tr>
           <td></td>
-          <td><input type="number" onClick="this.select()"  name="r279" id="r279" required="" v-model="r279" ref="r279" min=0></td>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r279" id="r279" required="" v-model="r279" ref="r279"></currency></td>
         </tr>
 
         <tr>
@@ -208,7 +235,7 @@
         </tr>
         <tr>
           <td></td>
-          <td><input type="number" onClick="this.select()"  name="r297" id="r297" required="" v-model="r297" ref="r297" min=0></td>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r297" id="r297" required="" v-model="r297" ref="r297"></currency></td>
         </tr>
 
         <tr>
@@ -220,7 +247,7 @@
         </tr>
         <tr>
           <td></td>
-          <td><input type="number" onClick="this.select()"  name="r304" id="r304" required="" v-model="r304" ref="r304" min=0></td>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r304" id="r304" required="" v-model="r304" ref="r304"></currency></td>
         </tr>
       </table>
       
@@ -233,16 +260,16 @@
         <td class="noborder"><label class="label">Baris Jumlah Kolom 4</label></td>
       </tr>
       <tr>
-        <td><input type="number" onClick="this.select()"  name="r431ab" id="r431ab" required="" v-model="r431ab" ref="r431ab" min=0></td>
-        <td><input type="number" onClick="this.select()"  name="r431ap" id="r431ap" required="" v-model="r431ap" ref="r431ap" min=0></td>
+        <td><currency inputmode="numeric" onClick="this.select()"  name="r431ab" id="r431ab" required="" v-model="r431ab" ref="r431ab"></currency></td>
+        <td><currency inputmode="numeric" onClick="this.select()"  name="r431ap" id="r431ap" required="" v-model="r431ap" ref="r431ap"></currency></td>
       </tr>
       <tr>
         <td class="noborder"><label class="label">Baris Jumlah Kolom 5</label></td>
         <td class="noborder"><label class="label">Baris Jumlah Kolom 6</label></td>
       </tr>
       <tr>
-        <td><input type="number" onClick="this.select()"  name="r431bb" id="r431bb" required="" v-model="r431bb" ref="r431bb" min=0></td>       
-        <td><input type="number" onClick="this.select()"  name="r431bp" id="r431bp" required="" v-model="r431bp" ref="r431bp" min=0></td>
+        <td><currency inputmode="numeric" onClick="this.select()"  name="r431bb" id="r431bb" required="" v-model="r431bb" ref="r431bb"></currency></td>       
+        <td><currency inputmode="numeric" onClick="this.select()"  name="r431bp" id="r431bp" required="" v-model="r431bp" ref="r431bp"></currency></td>
       </tr>
     </table>
     <div class="warning">
@@ -254,15 +281,15 @@
           <td class="noborder"><label class="label">Kolom 6 baris Jumlah:</label></td>
         </tr>
         <tr>
-          <td><input type="number" onClick="this.select()"  name="r5ak5" id="r5ak5" required="" v-model="r5ak5" ref="r5ak5" min=0></td>
-          <td><input type="number" onClick="this.select()"  name="r5ak6" id="r5ak6" required="" v-model="r5ak6" ref="r5ak6" min=0></td>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r5ak5" id="r5ak5" required="" v-model="r5ak5" ref="r5ak5"></currency></td>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r5ak6" id="r5ak6" required="" v-model="r5ak6" ref="r5ak6"></currency></td>
         </tr>
         <tr>
           <td class="noborder"><label class="label">Kolom 7 baris Jumlah:</label></td>
           <td class="noborder"></td>
         </tr>
         <tr>
-          <td><input type="number" onClick="this.select()"  name="r5ak7" id="r5ak7" required="" v-model="r5ak7" ref="r5ak7" min=0></td>
+          <td><currency inputmode="numeric" onClick="this.select()"  name="r5ak7" id="r5ak7" required="" v-model="r5ak7" ref="r5ak7"></currency></td>
           <td> </td>
         </tr>
       </table>
@@ -275,7 +302,7 @@
             <td class="noborder"></td>
           </tr>
           <tr>
-            <td><input type="number" onClick="this.select()"  name="r5bk7" id="r5bk7" required="" v-model="r5bk7" ref="r5bk7" min=0></td>
+            <td><currency inputmode="numeric" onClick="this.select()"  name="r5bk7" id="r5bk7" required="" v-model="r5bk7" ref="r5bk7"></currency></td>
             <td> </td>
           </tr>
         </table>
@@ -288,8 +315,8 @@
               <td class="noborder"><label class="label">Kolom 4 baris Jumlah:</label></td>
             </tr>
             <tr>
-              <td><input type="number" onClick="this.select()"  name="r5ek2" id="r5ek2" required="" v-model="r5ek2" ref="r5ek2" min=0></td>
-              <td><input type="number" onClick="this.select()"  name="r5ek4" id="r5ek4" required="" v-model="r5ek4" ref="r5ek4" min=0></td>
+              <td><currency inputmode="numeric" onClick="this.select()"  name="r5ek2" id="r5ek2" required="" v-model="r5ek2" ref="r5ek2"></currency></td>
+              <td><currency inputmode="numeric" onClick="this.select()"  name="r5ek4" id="r5ek4" required="" v-model="r5ek4" ref="r5ek4"></currency></td>
             </tr>
           </table>
          
@@ -305,39 +332,39 @@
               <td class="noborder"><label class="label">T1A:</label></td>
             </tr>
             <tr>
-              <td><input type="number" onClick="this.select()"  name="u1" id="u1" required="" v-model="u1" ref="u1" min=0></td>
-              <td><input type="number" onClick="this.select()"  name="t1a1" id="t1a1" required="" v-model="t1a1" ref="t1a1" min=0></td>
+              <td><currency inputmode="numeric" onClick="this.select()"  name="u1" id="u1" required="" v-model="u1" ref="u1"></currency></td>
+              <td><currency inputmode="numeric" onClick="this.select()"  name="t1a1" id="t1a1" required="" v-model="t1a1" ref="t1a1"></currency></td>
             </tr>
             <tr>
               <td class="noborder"><label class="label">T1B:</label></td>
               <td class="noborder"><label class="label">T2:</label></td>
             </tr>
             <tr>
-              <td><input type="number" onClick="this.select()"  name="t1b1" id="t1b1" required="" v-model="t1b1" ref="t1b1" min=0></td>
-              <td><input type="number" onClick="this.select()"  name="t21" id="t21" required="" v-model="t21" ref="t21" min=0></td>
+              <td><currency inputmode="numeric" onClick="this.select()"  name="t1b1" id="t1b1" required="" v-model="t1b1" ref="t1b1"></currency></td>
+              <td><currency inputmode="numeric" onClick="this.select()"  name="t21" id="t21" required="" v-model="t21" ref="t21"></currency></td>
             </tr>
             <tr>
               <td class="noborder"><label class="label">T3:</label></td>
               <td class="noborder"><label class="label">T4:</label></td>
             </tr>
             <tr>
-              <td><input type="number" onClick="this.select()"  name="t31" id="t31" required="" v-model="t31" ref="t31" min=0></td>
-              <td><input type="number" onClick="this.select()"  name="t41" id="t41" required="" v-model="t41" ref="t41" min=0></td>
+              <td><currency inputmode="numeric" onClick="this.select()"  name="t31" id="t31" required="" v-model="t31" ref="t31"></currency></td>
+              <td><currency inputmode="numeric" onClick="this.select()"  name="t41" id="t41" required="" v-model="t41" ref="t41"></currency></td>
             </tr>
             <tr>
               <td class="noborder"><label class="label">T5:</label></td>
               <td class="noborder"><label class="label">L:</label></td>
             </tr>
             <tr>
-              <td><input type="number" onClick="this.select()"  name="t51" id="t51" required="" v-model="t51" ref="t51" min=0></td>
-              <td><input type="number" onClick="this.select()"  name="l41" id="l1" required="" v-model="l1" ref="l1" min=0></td>
+              <td><currency inputmode="numeric" onClick="this.select()"  name="t51" id="t51" required="" v-model="t51" ref="t51"></currency></td>
+              <td><currency inputmode="numeric" onClick="this.select()"  name="l41" id="l1" required="" v-model="l1" ref="l1"></currency></td>
             </tr>
             <tr>
               <td class="noborder"><label class="label">N:</label></td>
               <td class="noborder"></td>
             </tr>
             <tr>
-              <td><input type="number" onClick="this.select()"  name="n1" id="n1" required="" v-model="n1" ref="n1" min=0></td>
+              <td><currency inputmode="numeric" onClick="this.select()"  name="n1" id="n1" required="" v-model="n1" ref="n1"></currency></td>
               <td> </td>
             </tr>
             </table>
@@ -350,40 +377,40 @@
                 <td class="noborder"><label class="label">K:</label></td>
               </tr>
               <tr>
-                <td><input type="number" onClick="this.select()"  name="u2" id="u2" required="" v-model="u2" ref="u2" min=0></td>
-                <td><input type="number" onClick="this.select()"  name="k2" id="k2" required="" v-model="k2" ref="k2" min=0></td>
+                <td><currency inputmode="numeric" onClick="this.select()"  name="u2" id="u2" required="" v-model="u2" ref="u2"></currency></td>
+                <td><currency inputmode="numeric" onClick="this.select()"  name="k2" id="k2" required="" v-model="k2" ref="k2"></currency></td>
               </tr>
               <tr>
                 <td class="noborder"><label class="label">T1A:</label></td>
                 <td class="noborder"><label class="label">T1B:</label></td>
               </tr>
               <tr>
-                <td><input type="number" onClick="this.select()"  name="t1a2" id="t1a2" required="" v-model="t1a2" ref="t1a2" min=0></td>
-                <td><input type="number" onClick="this.select()"  name="t1b2" id="t1b2" required="" v-model="t1b2" ref="t1b2" min=0></td>
+                <td><currency inputmode="numeric" onClick="this.select()"  name="t1a2" id="t1a2" required="" v-model="t1a2" ref="t1a2"></currency></td>
+                <td><currency inputmode="numeric" onClick="this.select()"  name="t1b2" id="t1b2" required="" v-model="t1b2" ref="t1b2"></currency></td>
               </tr>
               <tr>
                 <td class="noborder"><label class="label">T2:</label></td>
                 <td class="noborder"><label class="label">T3:</label></td>
               </tr>
               <tr>
-                <td><input type="number" onClick="this.select()"  name="t22" id="t22" required="" v-model="t22" ref="t22" min=0></td>
-                <td><input type="number" onClick="this.select()"  name="t32" id="t32" required="" v-model="t32" ref="t32" min=0></td>
+                <td><currency inputmode="numeric" onClick="this.select()"  name="t22" id="t22" required="" v-model="t22" ref="t22"></currency></td>
+                <td><currency inputmode="numeric" onClick="this.select()"  name="t32" id="t32" required="" v-model="t32" ref="t32"></currency></td>
               </tr>
               <tr>
                 <td class="noborder"><label class="label">T4:</label></td>
                 <td class="noborder"><label class="label">T5:</label></td>
               </tr>
               <tr>
-                <td><input type="number" onClick="this.select()"  name="t42" id="t42" required="" v-model="t42" ref="t42" min=0></td>
-                <td><input type="number" onClick="this.select()"  name="t52" id="t52" required="" v-model="t52" ref="t52" min=0></td>
+                <td><currency inputmode="numeric" onClick="this.select()"  name="t42" id="t42" required="" v-model="t42" ref="t42"></currency></td>
+                <td><currency inputmode="numeric" onClick="this.select()"  name="t52" id="t52" required="" v-model="t52" ref="t52"></currency></td>
               </tr>
               <tr>
                 <td class="noborder"><label class="label">L:</label></td>
                 <td class="noborder"><label class="label">N:</label></td>
               </tr>
               <tr>
-                <td><input type="number" onClick="this.select()"  name="l2" id="l2" required="" v-model="l2" ref="l2" min=0></td>
-                <td><input type="number" onClick="this.select()"  name="n2" id="n2" required="" v-model="n2" ref="n2" min=0></td>
+                <td><currency inputmode="numeric" onClick="this.select()"  name="l2" id="l2" required="" v-model="l2" ref="l2"></currency></td>
+                <td><currency inputmode="numeric" onClick="this.select()"  name="n2" id="n2" required="" v-model="n2" ref="n2"></currency></td>
               </tr>
               </table>
               <div class="warning">
@@ -395,40 +422,40 @@
                   <td class="noborder"><label class="label">K:</label></td>
                 </tr>
                 <tr>
-                  <td><input type="number" onClick="this.select()"  name="u3" id="u3" required="" v-model="u3" ref="u3" min=0></td>
-                  <td><input type="number" onClick="this.select()"  name="k3" id="k3" required="" v-model="k3" ref="k3" min=0></td>
+                  <td><currency inputmode="numeric" onClick="this.select()"  name="u3" id="u3" required="" v-model="u3" ref="u3"></currency></td>
+                  <td><currency inputmode="numeric" onClick="this.select()"  name="k3" id="k3" required="" v-model="k3" ref="k3"></currency></td>
                 </tr>
                 <tr>
                   <td class="noborder"><label class="label">T1A:</label></td>
                   <td class="noborder"><label class="label">T1B:</label></td>
                 </tr>
                 <tr>
-                  <td><input type="number" onClick="this.select()"  name="t1a3" id="t1a3" required="" v-model="t1a3" ref="t1a3" min=0></td>
-                  <td><input type="number" onClick="this.select()"  name="t1b3" id="t1b3" required="" v-model="t1b3" ref="t1b3" min=0></td>
+                  <td><currency inputmode="numeric" onClick="this.select()"  name="t1a3" id="t1a3" required="" v-model="t1a3" ref="t1a3"></currency></td>
+                  <td><currency inputmode="numeric" onClick="this.select()"  name="t1b3" id="t1b3" required="" v-model="t1b3" ref="t1b3"></currency></td>
                 </tr>
                 <tr>
                   <td class="noborder"><label class="label">T2:</label></td>
                   <td class="noborder"><label class="label">T3:</label></td>
                 </tr>
                 <tr>
-                  <td><input type="number" onClick="this.select()"  name="t23" id="t23" required="" v-model="t23" ref="t23" min=0></td>
-                  <td><input type="number" onClick="this.select()"  name="t33" id="t33" required="" v-model="t33" ref="t33" min=0></td>
+                  <td><currency inputmode="numeric" onClick="this.select()"  name="t23" id="t23" required="" v-model="t23" ref="t23"></currency></td>
+                  <td><currency inputmode="numeric" onClick="this.select()"  name="t33" id="t33" required="" v-model="t33" ref="t33"></currency></td>
                 </tr>
                 <tr>
                   <td class="noborder"><label class="label">T4:</label></td>
                   <td class="noborder"><label class="label">T5:</label></td>
                 </tr>
                 <tr>
-                  <td><input type="number" onClick="this.select()"  name="t43" id="t43" required="" v-model="t43" ref="t43" min=0></td>
-                  <td><input type="number" onClick="this.select()"  name="t53" id="t53" required="" v-model="t53" ref="t53" min=0></td>
+                  <td><currency inputmode="numeric" onClick="this.select()"  name="t43" id="t43" required="" v-model="t43" ref="t43"></currency></td>
+                  <td><currency inputmode="numeric" onClick="this.select()"  name="t53" id="t53" required="" v-model="t53" ref="t53"></currency></td>
                 </tr>
                 <tr>
                   <td class="noborder"><label class="label">L:</label></td>
                   <td class="noborder"><label class="label">N:</label></td>
                 </tr>
                 <tr>
-                  <td><input type="number" onClick="this.select()"  name="l3" id="l3" required="" v-model="l3" ref="l3" min=0></td>
-                  <td><input type="number" onClick="this.select()"  name="n3" id="n3" required="" v-model="n3" ref="n3" min=0></td>
+                  <td><currency inputmode="numeric" onClick="this.select()"  name="l3" id="l3" required="" v-model="l3" ref="l3"></currency></td>
+                  <td><currency inputmode="numeric" onClick="this.select()"  name="n3" id="n3" required="" v-model="n3" ref="n3"></currency></td>
                 </tr>
                 </table>
                 <div class="warning">
@@ -440,7 +467,7 @@
                     <td class="noborder"></td>
                   </tr>
                   <tr>
-                    <td><input type="number" onClick="this.select()"  name="d1" id="d1" required="" v-model="d1" ref="d1" min=0></td>
+                    <td><currency inputmode="numeric" onClick="this.select()"  name="d1" id="d1" required="" v-model="d1" ref="d1"></currency></td>
                     <td> </td>
                   </tr>
                   </table>
@@ -453,8 +480,8 @@
                       <td class="noborder"><label class="label">D di kolom 3:</label></td>
                     </tr>
                     <tr>
-                      <td><input type="number" onClick="this.select()"  name="d2" id="d2" required="" v-model="d2" ref="d2" min=0></td>
-                      <td><input type="number" onClick="this.select()"  name="d3" id="d3" required="" v-model="d3" ref="d3" min=0></td>
+                      <td><currency inputmode="numeric" onClick="this.select()"  name="d2" id="d2" required="" v-model="d2" ref="d2"></currency></td>
+                      <td><currency inputmode="numeric" onClick="this.select()"  name="d3" id="d3" required="" v-model="d3" ref="d3"></currency></td>
                     </tr>
                   </table>
                   <div class="warning">
@@ -466,8 +493,8 @@
                         <td class="noborder"><label class="label">D di kolom 3:</label></td>
                       </tr>
                       <tr>
-                        <td><input type="number" onClick="this.select()"  name="d4" id="d4" required="" v-model="d4" ref="d4" min=0></td>
-                        <td><input type="number" onClick="this.select()"  name="d5" id="d5" required="" v-model="d5" ref="d5" min=0></td>
+                        <td><currency inputmode="numeric" onClick="this.select()"  name="d4" id="d4" required="" v-model="d4" ref="d4"></currency></td>
+                        <td><currency inputmode="numeric" onClick="this.select()"  name="d5" id="d5" required="" v-model="d5" ref="d5"></currency></td>
                       </tr>
                   </table>
     <div class="blue-message">

@@ -39,7 +39,7 @@ new Vue({
       {
         satuan: ['Kg'],
         konv:[0.18],
-        sat: 'Kg jagung basah dengan kulit'
+        sat: 'Kg Kacang Kedelai'
       },
                           //jagung
       {

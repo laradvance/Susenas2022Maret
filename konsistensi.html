@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='en' class=''>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>Konversi Susenas</title>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">  
+</head>
+
+<body>
+  <div id="app">
+  <form class="vue-form" @submit.prevent="submit">
+    <div class="error-message">
+      <p>Konsistensi K dan KP</p>
+    </div>
+
+    <fieldset>
+
+      <div>
+      <div class="blue-message">
+        <p>VSEN22.K</p>
+      </div>
+      <br><br>
+      <table>
+        <tr v-for="entry in entries">
+          <td colspan="6"><label class="label-result">{{ entry.label }}</label></td>
+          <td>
+            <div>
+              <input :id="entry.value" type="checkbox" name="rinciank" :value="entry.value" v-model="rinciank" />
+              <label class="label-result" :for="entry.value"></label>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div class="blue-message">
+        <p>VSEN22.KP</p>
+      </div>
+      <br><br>
+      <table>
+        <tr>
+          <td colspan="2" class="error label-result">Jika error, pernyataan harus terpenuhi</td>
+          <td colspan="2" class="warning label-result">Jika warning, beri catatan jika tidak terpenuhi</td>
+        </tr>
+        <tr v-for="kp in rinciankp">
+          <td colspan="2"><label class="label-result">{{ kp.rincian }}</label></td>
+          <td><label class="label-result">{{ kp.kondisi }}</label></td>
+          <td v-if="kp.fatal==2" class="warning">Warning</td>
+          <td v-if="kp.fatal==1" class="error">Error</td>
+        </tr>
+      </table>
+    </fieldset>
+  </form>
+
+</div>
+  
+<script src="vue.min.js"></script>
+<script src="konsistensi.js"></script> 
+</body>
+
+</html>
