@@ -43,7 +43,7 @@
       </div>
       <div>
         <label class="label" for="penghasilan">Total Penghasilan selama SETAHUN</label>
-        <input type="number" onClick="this.select()"  name="penghasilan" id="penghasilan" required="" v-model="penghasilan" ref="penghasilan" min=0>
+        <currency inputmode="numeric" onClick="this.select()"  name="penghasilan" id="penghasilan" required="" v-model="penghasilan" ref="penghasilan"></currency>
       </div>
       <div class="success">
         <p>Perkiraan nilai PPh</p>

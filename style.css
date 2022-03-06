@@ -87,6 +87,7 @@ header h1 {
 .vue-form h4,
 .vue-form .label {
   color: #4990a1;
+  margin-bottom: 5px;
 }
 .vue-form .label {
   display: block;
@@ -126,7 +127,8 @@ header h1 {
   box-shadow: 0 0 5px rgba(44, 151, 222, 0.2);
 }
 
-.vue-form input[type="number"] {
+.vue-form input[type="number"],
+.vue-form input[type="text"] {
   text-align: right;  
   margin-bottom: 15px;
 }
@@ -424,6 +426,12 @@ td.noborder {
   border-bottom: 0pt dashed rgb(122, 120, 120);
 }
 
+td.error{
+  background-color: #e94b35;
+}
+td.warning{
+  background-color: #e49e06;
+}
 
 
 
