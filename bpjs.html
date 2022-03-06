@@ -47,7 +47,7 @@
 
       <div v-if="jenis=='1'">
         <label class="label" for="upah">Upah/gaji pokok per bulan</label>
-        <input type="number" onClick="this.select()"  name="upah" id="upah" required="" v-model="upah" ref="upah" min=0>
+        <currency inputmode="numeric" v-model="upah" name="upah" id="upah" required="" ref="upah" onClick="this.select()" ></currency>
       </div>
 
       <div class="success">

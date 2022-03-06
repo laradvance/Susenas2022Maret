@@ -12,7 +12,7 @@ new Vue({
         {label:'Rincian 403=8' , value:2},
         {label:'Rincian 407<1' , value:3},
         {label:'Rincian 407<5' , value:4},
-        {label:'Rincian 409 - rincian 407<=1' , value:5},
+        {label:'(Rincian 409 - rincian 407)<=1' , value:5},
         {label:'Rincian 605=1,2' , value:6},
         {label:'Rincian 610=2' , value:7},
         {label:'Rincian 616=1' , value:8},
