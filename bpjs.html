@@ -56,7 +56,7 @@
       
       <table>
         <tr>
-          <td><label class="label-result">Isian KP r 311: </label></td>
+          <td><label class="label-result">Rincian 311: </label></td>
           <td class="right"><label class="label-result">{{ jumlah }}</label></td>
         </tr>
         <tr v-if="jenis=='0'">
@@ -64,7 +64,7 @@
           <td class="right"><label class="label-result">{{ transfer }}</label></td>
         </tr>
         <tr v-if="jenis=='1'">
-          <td><label class="label-result">Blok VA kolom 6: </label></td>
+          <td><label class="label-result">Tambahkan Blok VA kolom 6 dengan: </label></td>
           <td class="right"><label class="label-result">{{ gaji }}</label></td>
         </tr>
       </table>
@@ -75,7 +75,7 @@
       
       <table>
         <div v-if="jenis=='0'" class="warning">
-          <p>Isian KP r 311:</p>
+          <p>Rincian 311:</p>
         </div>
              <tr v-if="jenis=='0'">
           <td><label class="label-result">PBI</label></td>
@@ -98,7 +98,7 @@
           <td class="right"><label class="label-result">5% dari Gaji Pokok/bulan</label></td>
         </tr>
         <tr v-if="jenis=='0'">
-          <td colspan="2"><div  class="warning"><p>Jumlah yang diberi tanda T1B dan N</p></div></td>
+          <td colspan="2"><div  class="warning"><p>Jumlah yang diberi tanda T1B dan N:</p></div></td>
         </tr>
         <tr v-if="jenis=='0'">
           <td><label class="label-result">PBI: </label></td>
@@ -112,7 +112,7 @@
           <td colspan="2"><div  class="warning"><p>Blok VA kolom 6:</p></div></td>
         </tr>
         <tr v-if="jenis=='1'">
-          <td><label class="label-result">Blok VA kolom 6: </label></td>
+          <td><label class="label-result">Tambahkan Blok VA kolom 6 dengan: </label></td>
           <td class="right"><label class="label-result">4% dari Gaji Pokok/bulan</label></td>
         </tr>
       </table>

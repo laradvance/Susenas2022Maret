@@ -14,7 +14,7 @@
   <div id="app">
   <form class="vue-form" @submit.prevent="submit">
     <div class="error-message">
-      <p>Imunisasi Setahun Terakhir</p>
+      <p>Imunisasi</p>
     </div>
 
     <fieldset>
@@ -53,11 +53,11 @@
         <input type="number" onClick="this.select()"  name="campak" id="campak" required="" v-model="campak" ref="campak" min=0>
       </div>
       <div class="success">
-        <p>Perkiraan nilai imunisasi (r 260)</p>
+        <p>Perkiraan nilai imunisasi</p>
       </div>
       <table v-if="tempat==0">
         <tr>
-          <td><label class="label-result">Isian KP r 260 kolom 5: </label></td>
+          <td><label class="label-result">Rincian 260: </label></td>
           <td class="right"><label class="label-result">{{ jumlah }}</label></td>
         </tr>
       </table>
