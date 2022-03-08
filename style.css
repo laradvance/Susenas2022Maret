@@ -452,3 +452,11 @@ td.warning{
 #myBtn:hover {
   background-color: transparent;
 }
+
+table.blue {
+  background-color:#eaf3f5;
+}
+
+table.orange {
+  background-color: #f4f8e3;
+}
